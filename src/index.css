@@ -67,12 +67,22 @@ h3 {
   width: 50%;
 }
 
+h3 a {
+  font-size: 1.75rem;
+  font-family:"Arial";
+  color: var(--secondary);
+  width: 50%;
+}
+
 h4 {
   font-size: 1.5rem;
 }
 
 h5 {
   font-size: 1.25rem;
+  font-family:"Arial";
+  color: var(--tertiary);
+  width: 50%;
 }
 
 h6 {
