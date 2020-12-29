@@ -369,11 +369,21 @@ a {
   font-size: 18px;
   top: 200px;
   transition: 0.6s;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
   color: var(--dark)
 }
 
-.project:hover .project-img h3, .project:hover .project-img h4 {
+.project-img a {
+  position: relative;
+  width: 20%;
+  z-index: 9999;
+  top: 200px;
+  transition: 0.4s;
+  color: var(--darker);
+  font-size: 40px;
+}
+
+.project:hover .project-img h3, .project:hover .project-img h4, .project:hover .project-img a {
   top: 0px;
 }
 

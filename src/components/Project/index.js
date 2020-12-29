@@ -53,6 +53,10 @@ function Project({index}) {
         <article class="project">
             <div class={`project-img project-${index}`}>
                 <div>
+                    <div class = "flex-row">
+                        <a href = {`${project.github}`} target = "_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        {project.link && <a href = {`${project.link}`} target = "_blank"><i class="fa fa-link" aria-hidden="true"></i></a>}
+                    </div>
                     <h3>{project.name}</h3>
                     <h4>{project.technologies}</h4>
                 </div>
