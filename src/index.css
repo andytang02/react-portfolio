@@ -104,12 +104,33 @@ a:hover {
   text-decoration: underline;
 }
 
-header {
-  background: var(--dark);
+header{
+  background-image: url("./assets/header.jpg");
 }
 
 header a {
   color: var(--light);
+  font-family: 'Brush Script MT', cursive;
+  margin: 40px 0px 0px 40px;
+  font-size: 35px;
+}
+
+header span {
+  color: var(--light);
+  font-family: 'Brush Script MT', cursive;
+}
+
+footer {
+  background-image: url("./assets/header.jpg");
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  font-size: 40px;
+  color: var(--light);
+  margin: 0px 20px 0px 20px;
 }
 
 button {
@@ -178,6 +199,11 @@ textarea {
 	padding: 5px;
 }
 
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
 .container {
   width: 85%;
   max-width: 1200px;
@@ -200,6 +226,10 @@ textarea {
 
 .flex-end {
   justify-content: flex-end;
+}
+
+.center {
+  justify-content: center;
 }
 
 .mx-1 {
@@ -295,16 +325,6 @@ button {
 	font-weight: 600;
 	margin-bottom: 30px;
 	padding: 10px 15px;	
-}
-
-a {
-	border-radius: 5px;
-	color: var(--primary);
-	font-weight: 600;
-	padding: 2px 4px;
-	margin-left: -2px;
-	margin-right: -2px;
-	
 }
 
 .navActive {
