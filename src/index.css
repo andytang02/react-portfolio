@@ -300,3 +300,103 @@ a {
 .navActive {
   color: var(--secondary);
 }
+
+.projects-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.projects-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-template-rows: repeat(2, 2fr);
+}
+
+.project{
+  margin: 25px auto 10px auto;
+  background: var(--secondary);
+  color: var(--primary);
+  flex: 1;
+  border: 2px solid var(--secondary);
+  display: flex;
+}
+
+.project-img {
+  width: 450px;
+  height: 200px;
+  background-size: cover;
+  display: flex;
+  padding: 15px;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.project-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(var(--tertiary), var(--secondary));
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.project:hover .project-img::after {
+   opacity: 1;
+}
+
+.project-img h3 {
+  position: relative;
+  width: 100%;
+  z-index: 9999;
+  font-size: 28px;
+  margin-bottom: 5px;
+  top: 200px;
+  transition: 0.6s;
+  color: var(--primary)
+}
+
+.project-img h4 {
+  position: relative;
+  width: 100%;
+  z-index: 9999;
+  font-size: 18px;
+  top: 200px;
+  transition: 0.6s;
+  transition-delay: 0.2s;
+  color: var(--dark)
+}
+
+.project:hover .project-img h3, .project:hover .project-img h4 {
+  top: 0px;
+}
+
+.project-0 {
+  background-image: url("./assets/weather_dashboard.jpg");
+}
+
+.project-1 {
+  background-image: url("./assets/free_thinkers.png");
+}
+
+.project-2 {
+  background-image: url("./assets/team_profile_generator.png");
+}
+
+.project-3 {
+  background-image: url("./assets/employee_tracker.png");
+}
+
+.project-4 {
+  background-image: url("./assets/bay_area_real_estate.png");
+}
+
+.project-5 {
+  background-image: url("./assets/workday_scheduler.jpg");
+}
