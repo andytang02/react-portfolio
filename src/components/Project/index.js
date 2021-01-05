@@ -53,7 +53,7 @@ function Project({index}) {
         <article class="project">
             <div class={`project-img project-${index}`}>
                 <div>
-                    <div class = "flex-row">
+                    <div class = "project-icons">
                         <a href = {`${project.github}`} target = "_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
                         {project.link && <a href = {`${project.link}`} target = "_blank"><i class="fa fa-link" aria-hidden="true"></i></a>}
                     </div>

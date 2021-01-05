@@ -1,4 +1,3 @@
-
 :root {
   --primary: #22577a;
   --secondary: #8cff98;
@@ -10,15 +9,16 @@
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
+  --spacing-ten: calc(5rem);
 }
 
 * {
   box-sizing: border-box;
 }
 
-html,
-body {
-  min-height: 100%;
+
+html {
+  min-height: 100vh;
 }
 
 body {
@@ -88,14 +88,17 @@ p {
   margin-top: 0;
 }
 
-footer {
+.footer {
   background-image: url("./assets/header.jpg");
   position: absolute;
   bottom: 0;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-footer a {
+.footer-text {
   font-size: 40px;
   color: var(--light);
   margin: 0px 20px 0px 20px;
@@ -128,91 +131,6 @@ textarea {
 .page-container {
   position: relative;
   min-height: 100vh;
-}
-
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.flex-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-start {
-  justify-content: flex-start;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-.space-evenly {
-  justify-content: space-evenly;
-}
-
-.space-around {
-  justify-content: space-around;
-}
-
-.flex-end {
-  justify-content: flex-end;
-}
-
-.center {
-  justify-content: center;
-}
-
-.mx-1 {
-  margin-right: var(--spacing-one);
-  margin-left: var(--spacing-one);
-}
-
-.mx-2 {
-  margin-right: var(--spacing-two);
-  margin-left: var(--spacing-two);
-}
-
-.my-1 {
-  margin-top: var(--spacing-one);
-  margin-bottom: var(--spacing-one);
-}
-
-.my-2 {
-  margin-top: var(--spacing-two);
-  margin-bottom: var(--spacing-two);
-}
-
-.my-5 {
-  margin-top: var(--spacing-five);
-  margin-bottom: var(--spacing-five);
-}
-
-.px-1 {
-  padding-right: var(--spacing-one);
-  padding-left: var(--spacing-one);
-}
-
-.px-2 {
-  padding-right: var(--spacing-two);
-  padding-left: var(--spacing-two);
-}
-
-.py-1 {
-  padding-top: var(--spacing-one);
-  padding-bottom: var(--spacing-one);
-}
-
-.py-2 {
-  padding-top: var(--spacing-two);
-  padding-bottom: var(--spacing-two);
-}
-
-.text-center {
-  text-align: center;
 }
 
 .header {
@@ -254,31 +172,53 @@ textarea {
   font-family: 'Brush Script MT', cursive;
 }
 
-.projects-wrapper {
-  width: 100%;
+.page-header {
+  margin-left: var(--spacing-five);
+  margin-top: var(--spacing-five);
+}
+
+.about-container {
+  margin-top: var(--spacing-five);
+  margin-left: var(--spacing-five);
+  margin-right: var(--spacing-five);
   display: flex;
+  flex-wrap: wrap;
+  text-align: center;
   justify-content: space-around;
 }
 
+.about-image {
+  flex: 0 1 calc(100%);
+}
+
+.about-description {
+  flex: 0 1 calc(100%);
+  font-size: 1.25rem;
+  font-family:"Arial";
+  color: var(--secondary);
+  width: 50%;
+  padding-bottom: 5rem;
+}
+
 .projects-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 3fr);
-  grid-template-rows: repeat(2, 2fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
 }
 
 .project{
-  margin: 25px auto 10px auto;
+  margin-top: var(--spacing-five);
   background: var(--secondary);
   color: var(--primary);
-  flex: 1;
+  flex: 0 0 calc(90%);
   border: 2px solid var(--secondary);
   display: flex;
+  height: 225px;
 }
 
 .project-img {
-  width: 450px;
-  height: 200px;
+  width: 100%;
   background-size: cover;
   display: flex;
   padding: 15px;
@@ -362,6 +302,11 @@ textarea {
 
 .project-5 {
   background-image: url("./assets/workday_scheduler.jpg");
+}
+
+.project-icons {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .col-1 {
@@ -461,6 +406,15 @@ textarea {
 
   .col-sm-12 {
     flex: 0 0 100%;
+  }
+
+  
+  .about-description {
+    flex: 0 1 calc(100%);
+    font-size: 1.75rem;
+    font-family:"Arial";
+    color: var(--secondary);
+    width: 50%;
   }
 
   .header {
@@ -589,6 +543,10 @@ textarea {
   .align-center-md {
     align-items: center;
   }
+
+  .project{
+    flex: 0 0 calc(45%);
+  }
 }
 
 /* col-lg */
@@ -641,6 +599,10 @@ textarea {
     flex: 0 0 100%;
   }
 
+  .page-header {
+    margin-left: var(--spacing-ten);
+  }
+
   .header {
     display: flex;
     flex-wrap: wrap;
@@ -680,6 +642,24 @@ textarea {
     font-family: 'Brush Script MT', cursive;
   }
 
+  .about-container {
+    margin-top: var(--spacing-five);
+    margin-left: var(--spacing-one);
+    margin-right: var(--spacing-one);
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+  }
+  
+  .about-image {
+    flex: 0 1 calc(40%);
+  }
+  
+  .about-description {
+    flex: 0 1 calc(40%);
+  }
 
 }
 
@@ -731,5 +711,9 @@ textarea {
 
   .col-xl-12 {
     flex: 0 0 100%;
+  }
+
+  .project{
+    flex: 0 0 calc(30%);
   }
 }

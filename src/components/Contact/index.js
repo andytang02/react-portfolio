@@ -34,8 +34,8 @@ function Contact() {
 
     return (
         <section className="my-5">
-          <h1>Contact Me</h1>
-          <form id="contact-form" onSubmit={handleSubmit}>
+          <h1 className="page-header">Contact Me</h1>
+          <form className = "contact-form" id="contact-form" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Name:</label>
                 <input type="text" defaultValue={name} onChange={handleChange} name="name" />
