@@ -33,28 +33,30 @@ function Contact() {
     }
 
     return (
-        <section className="my-5">
+        <section>
           <h1 className="page-header">Contact Me</h1>
-          <form className = "contact-form" id="contact-form" onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" defaultValue={name} onChange={handleChange} name="name" />
-            </div>
-            <div>
-                <label htmlFor="email">Email address:</label>
-                <input type="email" defaultValue={email} onChange={handleChange} name="email" />
-            </div>
-            <div>
-                <label htmlFor="message">Message:</label>
-                <textarea name="message" defaultValue={message} onChange={handleChange} rows="5"  />
-            </div>
-            {errorMessage && (
-                <div>
-                    <p className="error-text">{errorMessage}</p>
+          <div className = "contact">
+            <form className = "contact-form" id="contact-form" onSubmit={handleSubmit}>
+                <div className = "contact-group">
+                    <label className = "contact-label" htmlFor="name">Name:</label>
+                    <textarea className = "contact-text" type="text" defaultValue={name} onChange={handleChange} name="name" />
                 </div>
-            )}
-            <button data-testid="button" type="submit">Submit</button>
-          </form>
+                <div className = "contact-group">
+                    <label className = "contact-label"  htmlFor="email">Email address:</label>
+                    <textarea className = "contact-text" type="email" defaultValue={email} onChange={handleChange} name="email" />
+                </div>
+                <div className = "contact-group">
+                    <label className = "contact-label"  htmlFor="message">Message:</label>
+                    <textarea className = "contact-text contact-larger" name="message" defaultValue={message} onChange={handleChange} />
+                </div>
+                {errorMessage && (
+                    <div className = "contact-error">
+                        <p className="error-text">{errorMessage}</p>
+                    </div>
+                )}
+                <button className = "contact-button" data-testid="button" type="submit">Submit</button>
+            </form>
+          </div>
         </section>
     )
 }
