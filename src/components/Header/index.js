@@ -9,9 +9,9 @@ function Header(props) {
         setResumeSelected
     } = props;
   return (
-    <header className = "flex-row">
-        <h2 className = "col-12">
-            <a href="/">
+    <header className = "header">
+        <h2 className = "header-name">
+            <a className = "header-text" href="/">
                 Andy Tang
             </a>
         </h2>
