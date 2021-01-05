@@ -8,30 +8,30 @@ function Nav(props) {
         setResumeSelected
     } = props;
   return (
-        <nav>
-            <ul className="flex-row">
-                <li className="mx-2">
+        <nav className = "col-12">
+            <ul className="flex-row justify-center">
+                <li className="col-3">
                     <span onClick={() => {
                         setAboutSelected(true);
                         setPortfolioSelected(false);
                         setContactSelected(false);
                         setResumeSelected(false);}}>About Me</span>
                 </li>
-                <li className="mx-2">
+                <li className="col-3">
                     <span onClick={() => {
                         setAboutSelected(false);
                         setPortfolioSelected(true);
                         setContactSelected(false);
                         setResumeSelected(false);}}>Portfolio</span>
                 </li>
-                <li className="mx-2">
+                <li className="col-3">
                     <span onClick={() => {
                         setAboutSelected(false);
                         setPortfolioSelected(false);
                         setContactSelected(true);
                         setResumeSelected(false);}}>Contact Me</span>
                 </li>
-                <li className="mx-2">
+                <li className="col-3">
                     <span onClick={() => {
                         setAboutSelected(false);
                         setPortfolioSelected(false);

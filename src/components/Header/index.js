@@ -9,8 +9,8 @@ function Header(props) {
         setResumeSelected
     } = props;
   return (
-    <header className = "flex-row py-1">
-        <h2>
+    <header className = "flex-row">
+        <h2 className = "col-12">
             <a href="/">
                 Andy Tang
             </a>
