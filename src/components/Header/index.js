@@ -11,7 +11,7 @@ function Header(props) {
   return (
     <header className = "header">
         <h2 className = "header-name">
-            <a className = "header-text" href="/">
+            <a className = "header-text" href="./">
                 Andy Tang
             </a>
         </h2>
